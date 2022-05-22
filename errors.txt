@@ -1,0 +1,11 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/battle.rpy", line 28: invalid syntax
+        print(f"Encountered",end=" ")
+                            ^
+    
+
+Ren'Py Version: Ren'Py 7.4.4.1439
+Sun May 22 12:37:47 2022

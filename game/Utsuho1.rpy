@@ -1,33 +1,33 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
+﻿
+label Utsuho1:
 
 
-# The game starts here.
-
-label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
+    empty "Remains of Blazing Hell"
+    Utsuho "Orin?"
+    Orin "Yeah?"
+    Utsuho "Do you think Satori-sama will make eggs for dinner tonight?"
+    Orin "Do you ever want to eat anything else?"
+    Utsuho "..."
+    Utsuho "No?"
+    Orin "..."
+    Orin "She'll probably have some ready for you."
+    Utsuho "Yay!"
+    Orin "Hmm? What was that?"
+    GruntA "Go Rattata!"
+    GruntB "Here comes Zubat!"
+    GruntC "Don’t forget Muk!"
+    GruntA "Hahaha! As you can see you’re surrounded!"
+    GruntB "So give us all your Pokemon!"
+    GruntC "Or else!"
+    Utsuho "What’s a Pokemon?"
+    Orin "I have no idea."
+    GruntA "What? You don’t know what Pokemon are?"
+    GruntB "Um... then what do we do?"
+    GruntC "Uh... demand cash?"
+    GruntA "That works! Give us all your money!"
+    Utsuho "No! You can’t have my money!"
+    Orin "Okuu, you don’t have any money..."
+    Utsuho "Oh yeah..."
+    GruntA "Ugh! Enough talking! Let’s fight!"
 
     return
