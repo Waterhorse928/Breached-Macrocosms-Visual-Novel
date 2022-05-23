@@ -2,10 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/battle.rpy", line 28: invalid syntax
-        print(f"Encountered",end=" ")
-                            ^
+File "game/script.rpy", line 8: invalid syntax
+    import rocket1 from charactersEnemy
+                       ^
     
 
 Ren'Py Version: Ren'Py 7.4.4.1439
-Sun May 22 12:37:47 2022
+Sun May 22 19:41:48 2022
