@@ -1,110 +1,23 @@
-Wed May 25 16:58:58 2022
+Thu May 26 14:43:10 2022
 Windows-10-10.0.19041
 Ren'Py 7.4.4.1439
  
 
-Bootstrap to the start of init.init took 0.14s
+Bootstrap to the start of init.init took 0.08s
 Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.09s
-Loading script took 0.34s
-Loading save slot metadata. took 0.31s
-Loading persistent took 0.00s
-
-File "game/script.rpy", line 374: expected 'label_name_declare' not found.
-    label: characterSelect
-         ^
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 1.47s
-
-Initializing gl renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 970/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 512.77'
-Display Info: None
-Number of texture units: 32
-Using shader environment.
-Using FBO RTT.
-Root FBO is: 0
-FBO Maximum Texture Size: 2048
-Using gl renderer.
-Texture testing:
-- Hardware max texture size: 16384
-- 64px textures work.
-- 128px textures work.
-- 256px textures work.
-- 512px textures work.
-- 1024px textures work.
-- 2048px textures work.
-Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
-Root FBO is: 0
-FBO Maximum Texture Size: 2048
-Total time until interface ready: 3.47296905518s
-controller: '030000006d0400001dc2000000007200' 'Controller (Gamepad F310)' 1L
-Resetting cache.
-Bootstrap to the start of init.init took 18.21s
-Early init took 0.01s
-Loader init took 0.12s
-Loading error handling took 0.04s
-Loading script took 0.30s
-Loading save slot metadata. took 0.04s
-Loading persistent took 0.00s
-
-File "game/script.rpy", line 374: expected 'label_name_declare' not found.
-    label: characterSelect:
-         ^
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 0.77s
-
-Initializing gl renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 970/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 512.77'
-Display Info: None
-Number of texture units: 32
-Using shader environment.
-Using FBO RTT.
-Root FBO is: 0
-FBO Maximum Texture Size: 2048
-Using gl renderer.
-Texture testing:
-- Hardware max texture size: 16384
-- 64px textures work.
-- 128px textures work.
-- 256px textures work.
-- 512px textures work.
-- 1024px textures work.
-- 2048px textures work.
-Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
-Root FBO is: 0
-FBO Maximum Texture Size: 2048
-Total time until interface ready: 19.6831829548s
-Resetting cache.
-Bootstrap to the start of init.init took 22.61s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.09s
-Loading script took 0.27s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.22s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 
-File "game/script.rpy", line 374: expected 'label_name_declare' not found.
-    label: characterSelect:
-         ^
+File "game/script.rpy", line 403: expected statement.
+    battleOver = false
+               ^
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Interface start took 0.81s
+Interface start took 0.44s
 
 Initializing gl renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -131,23 +44,30 @@ Texture testing:
 Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 24.0512938499s
+Total time until interface ready: 1.21078014374s
+controller: '030000006d0400001dc2000000007200' 'Controller (Gamepad F310)' 1L
 Resetting cache.
-Bootstrap to the start of init.init took 35.61s
+Bootstrap to the start of init.init took 21.59s
 Early init took 0.00s
-Loader init took 0.08s
-Loading error handling took 0.06s
-Loading script took 0.26s
-Loading save slot metadata. took 0.05s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 
-File "game/script.rpy", line 384: expected menuitem
-    while charactersInMenu != len(playerList)-1:
-    ^
+File "game/script.rpy", line 44: invalid syntax
+            print(f"--{user.name}-- [{user.hp}/{user.maxHp}] HP")
+                                                                ^
+    
+
+File "game/script.rpy", line 421: invalid syntax
+                    target[x] = enemy[int(input(f"Choose a target for {player[x].skillList[action[x]].name}: "))]
+                                                                                                              ^
+    
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Interface start took 0.76s
+Interface start took 0.36s
 
 Initializing gl renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -174,4 +94,387 @@ Texture testing:
 Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 36.9888689518s
+Total time until interface ready: 22.2174921036s
+Resetting cache.
+Bootstrap to the start of init.init took 37.43s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 410: invalid syntax
+                    target[x] = enemy[int(input(f"Choose a target for {player[x].skillList[action[x]].name}: "))]
+                                                                                                              ^
+    
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.41s
+
+Initializing gl renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce GTX 970/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 512.77'
+Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 38.1819381714s
+Resetting cache.
+Bootstrap to the start of init.init took 62.88s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.10s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Water\\AppData\\Roaming/RenPy/backups\\Breached Macrocosms':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.25s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.06s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce GTX 970/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 512.77'
+Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 63.800440073s
+
+Full traceback:
+  File "game/script.rpy", line 392, in script
+    $ battleOver = false
+  File "renpy/ast.py", line 922, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 2218, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 392, in <module>
+    $ battleOver = false
+NameError: name 'false' is not defined
+
+While running game code:
+  File "game/script.rpy", line 392, in script
+    $ battleOver = false
+  File "game/script.rpy", line 392, in <module>
+    $ battleOver = false
+NameError: name 'false' is not defined
+Resetting cache.
+Bootstrap to the start of init.init took 117.55s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Water\\AppData\\Roaming/RenPy/backups\\Breached Macrocosms':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.26s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.05s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.03s
+
+Initializing gl renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce GTX 970/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 512.77'
+Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 118.438920021s
+
+Full traceback:
+  File "game/script.rpy", line 396, in script call
+    call chooseActions
+  File "game/script.rpy", line 402, in script
+    python:
+  File "renpy/ast.py", line 922, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 2218, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 406, in <module>
+    action[x] = int(chooseSkill(player[x].skillList))
+  File "game/script.rpy", line 27, in chooseSkill
+    if skillList[skillsInMenu].cooldown == 0:
+IndexError: list index out of range
+
+While running game code:
+  File "game/script.rpy", line 396, in script call
+    call chooseActions
+  File "game/script.rpy", line 402, in script
+    python:
+  File "game/script.rpy", line 406, in <module>
+    action[x] = int(chooseSkill(player[x].skillList))
+  File "game/script.rpy", line 27, in chooseSkill
+    if skillList[skillsInMenu].cooldown == 0:
+IndexError: list index out of range
+Resetting cache.
+Bootstrap to the start of init.init took 359.33s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.29s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce GTX 970/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 512.77'
+Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 360.268620014s
+
+Full traceback:
+  File "game/script.rpy", line 396, in script call
+    call chooseActions
+  File "game/script.rpy", line 402, in script
+    python:
+  File "renpy/ast.py", line 922, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 2218, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 406, in <module>
+    action[x] = int(chooseSkill(player[x].skillList))
+  File "game/script.rpy", line 27, in chooseSkill
+    if skillList[skillsInMenu].cooldown == 0:
+IndexError: list index out of range
+
+While running game code:
+  File "game/script.rpy", line 396, in script call
+    call chooseActions
+  File "game/script.rpy", line 402, in script
+    python:
+  File "game/script.rpy", line 406, in <module>
+    action[x] = int(chooseSkill(player[x].skillList))
+  File "game/script.rpy", line 27, in chooseSkill
+    if skillList[skillsInMenu].cooldown == 0:
+IndexError: list index out of range
+Resetting cache.
+Bootstrap to the start of init.init took 365.53s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Water\\AppData\\Roaming/RenPy/backups\\Breached Macrocosms':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.06s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce GTX 970/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 512.77'
+Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 366.377983093s
+
+Full traceback:
+  File "game/script.rpy", line 396, in script call
+    call chooseActions
+  File "game/script.rpy", line 402, in script
+    python:
+  File "renpy/ast.py", line 922, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 2218, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 406, in <module>
+    action[x] = int(chooseSkill(player[x]))
+  File "game/script.rpy", line 24, in chooseSkill
+    while skillsInMenu != len(skillList):
+NameError: global name 'skillList' is not defined
+
+While running game code:
+  File "game/script.rpy", line 396, in script call
+    call chooseActions
+  File "game/script.rpy", line 402, in script
+    python:
+  File "game/script.rpy", line 406, in <module>
+    action[x] = int(chooseSkill(player[x]))
+  File "game/script.rpy", line 24, in chooseSkill
+    while skillsInMenu != len(skillList):
+NameError: global name 'skillList' is not defined

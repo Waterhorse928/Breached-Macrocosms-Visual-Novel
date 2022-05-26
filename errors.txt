@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 384: expected menuitem
-    while charactersInMenu != len(playerList)-1:
-    ^
+File "game/script.rpy", line 410: invalid syntax
+                    target[x] = enemy[int(input(f"Choose a target for {player[x].skillList[action[x]].name}: "))]
+                                                                                                              ^
+    
 
 Ren'Py Version: Ren'Py 7.4.4.1439
-Wed May 25 16:59:34 2022
+Thu May 26 14:43:47 2022

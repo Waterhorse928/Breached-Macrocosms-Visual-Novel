@@ -16,6 +16,33 @@
     import random
     import time
 
+    def chooseSkill(y):
+
+        anotherSkillList = []
+        skillsInMenu = 0
+
+        while skillsInMenu != len(skillList):
+
+            skillsInMenu += 1
+            if y.skillList[skillsInMenu].cooldown == 0:
+                anotherSkillList.append ((str(y.skillList[skillsInMenu].name),skillsInMenu))
+            else:
+                if y.skillList[x].cooldown == 1:
+                    turns = "turn"
+                else:
+                    turns = "turns"
+                anotherSkillList.append ((str(skillList[skillsInMenu].name + " (Cooldown: {user.skillList[x].cooldown} {turns})"),skillsInMenu))
+                
+
+        narrator("Choose a Skill", interact=False)
+        result = renpy.display_menu(anotherSkillList,screen="choice")
+
+        return result
+
+
+
+
+
     
 
 python:
@@ -144,18 +171,7 @@ label battleStart:
             for x in range(1, len(player)+1):
                 print(f" {x}. {player[x].name}")
 
-        # Displays skills for a particular character
-        def listSkills (user):
-            print(f"--{user.name}-- [{user.hp}/{user.maxHp}] HP")
-            for x in range(len(user.skillList)):
-                if user.skillList[x].cooldown == 0:
-                    print(f" {x}. {user.skillList[x].name}")
-                else:
-                    if user.skillList[x].cooldown == 1:
-                        turns = "turn"
-                    else:
-                        turns = "turns"
-                    print(f" X. {user.skillList[x].name} [Cooldown: {user.skillList[x].cooldown} {turns}]")
+
 
         # Use a skill.
         def useSkill(user, skill, target):
@@ -200,35 +216,7 @@ label battleStart:
                             pass
             user.skillList[0].skill(user,target,party)
 
-        # choose actions loop
-        def chooseActions ():
-            for x in range(1, len(player)+1):
-                if player[x].isAlive == True:
-                    listSkills (player[x])
-                    action[x] = int(input("Choose a skill: "))
-                    if player[x].skillList[action[x]].type in [1,2,3]:
-                        if player[x].skillList[action[x]].type == 2:
-                            displayEnemies ()
-                            target[x] = enemy[int(input(f"Choose a target for {player[x].skillList[action[x]].name}: "))]
-                        if player[x].skillList[action[x]].type in [1,3]:
-                            displayPlayers ()
-                            target[x] = player[int(input(f"Choose a target for {player[x].skillList[action[x]].name}: "))]
-                        displayEnemies ()
-                        targetEx[x] = enemy[int(input(f"Choose a target for {player[x].skillList[0].name}: "))]
-                    if player[x].skillList[action[x]].type in [0]:
-                        displayEnemies ()
-                        target[x] = enemy[int(input(f"Choose a target for {player[x].skillList[action[x]].name}: "))]
-                        targetEx[x] = 0
-                    if player[x].skillList[action[x]].type in [4,6]:
-                        target[x] = random.choice(listAliveCharacters(enemy))
-                        targetEx[x] = 0
-                    if player[x].skillList[action[x]].type in [5,7]:
-                        target[x] = random.choice(listAliveCharacters(player))
-                        targetEx[x] = 0
-                else:
-                    action[x] = 0
-                    target[x] = random.choice(listAliveCharacters(enemy))
-                    targetEx[x] = 0
+
 
         # chooses enemy actions and targets
         def enemyActions ():
@@ -313,7 +301,6 @@ label battleStart:
     jump encounter
     python: 
         """
-        $ characterSelect ()
         while battleOver == False:
             $ chooseActions ()
             $ turnOrder ()
@@ -373,20 +360,77 @@ label encounter:
 
 label characterSelect:
 
-    e "Select a Team."
+    python:
 
-    while charactersSelected != 4 or len(playerList)-1:
+        anotherPlayerList = []
 
-        $ charactersSelected += 1
+        charactersSelected = 0
 
-        menu:
+        charactersInMenu = 0
 
-            while charactersInMenu != len(playerList)-1:
+        while charactersInMenu != len(playerList)-1:
 
-                $ charactersInMenu += 1
+            charactersInMenu += 1
 
-                "[playerList[charactersInMenu].name]":
-                    player[charactersSelected] = playerList[charactersInMenu]
+            anotherPlayerList.append ((playerList[charactersInMenu].name,charactersInMenu))
+
+        while charactersSelected != 4 and charactersSelected != len(playerList)-1:
+
+            charactersSelected += 1
+
+            narrator("Slot [charactersSelected]", interact=False)
+            characterSelectResult = renpy.display_menu(anotherPlayerList,screen="choice")
+
+            player[charactersSelected] = playerList[characterSelectResult]
+
+            anotherPlayerList.remove((playerList[characterSelectResult].name,characterSelectResult))
+
+    jump battleLoop
+
+label battleLoop:
+
+    $ battleOver = False
+
+    while battleOver == False:
+
+        call chooseActions
+
+    return
+
+label chooseActions:
+
+    python:
+
+        for x in range(1, len(player)+1):
+            if player[x].isAlive == True:
+                action[x] = int(chooseSkill(player[x]))
+
+            """
+                if player[x].skillList[action[x]].type in [1,2,3]:
+                    if player[x].skillList[action[x]].type == 2:
+                        displayEnemies ()
+                        target[x] = enemy[int(input(f"Choose a target for {player[x].skillList[action[x]].name}: "))]
+                    if player[x].skillList[action[x]].type in [1,3]:
+                        displayPlayers ()
+                        target[x] = player[int(input(f"Choose a target for {player[x].skillList[action[x]].name}: "))]
+                    displayEnemies ()
+                    targetEx[x] = enemy[int(input(f"Choose a target for {player[x].skillList[0].name}: "))]
+                if player[x].skillList[action[x]].type in [0]:
+                    displayEnemies ()
+                    target[x] = enemy[int(input(f"Choose a target for {player[x].skillList[action[x]].name}: "))]
+                    targetEx[x] = 0
+                if player[x].skillList[action[x]].type in [4,6]:
+                    target[x] = random.choice(listAliveCharacters(enemy))
+                    targetEx[x] = 0
+                if player[x].skillList[action[x]].type in [5,7]:
+                    target[x] = random.choice(listAliveCharacters(player))
+                    targetEx[x] = 0
+            else:
+                action[x] = 0
+                target[x] = random.choice(listAliveCharacters(enemy))
+                targetEx[x] = 0
+
+"""
 
 
 
