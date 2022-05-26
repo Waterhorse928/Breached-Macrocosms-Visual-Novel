@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 8: invalid syntax
-    import rocket1 from charactersEnemy
-                       ^
-    
+File "game/script.rpy", line 384: expected menuitem
+    while charactersInMenu != len(playerList)-1:
+    ^
 
 Ren'Py Version: Ren'Py 7.4.4.1439
-Sun May 22 19:41:48 2022
+Wed May 25 16:59:34 2022

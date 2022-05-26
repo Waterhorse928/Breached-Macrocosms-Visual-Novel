@@ -22,6 +22,8 @@ python:
 
     playerList = []
     enemy = {}
+    charactersSelected = 0
+    charactersInMenu = 0
 
 define Unknown = Character("???")
 define e = Character("")
@@ -135,16 +137,7 @@ label battleStart:
                 if x.cooldown != 0:
                     x.cooldown -= 1
 
-        # Displays player's characters and asks them to choose a party
-        def characterSelect ():
-        #    print(f"Characters:")
-            for x in range(1, len(playerList)):
-                print(f" {x}. {playerList[x].name}")
 
-            for x in range(1, min(len(playerList), 5)):
-                player[x] = input(f"Choose a character for slot {x}: ")
-                player[x] = int(player[x])
-                player[x] = playerList[player[x]]
 
         # Displays player's slots
         def displayPlayers ():
@@ -375,4 +368,47 @@ label encounter:
         del enemy[0]
 
     e "Encountered [encounterList]"
+
+    jump characterSelect
+
+label characterSelect:
+
+    e "Select a Team."
+
+    while charactersSelected != 4 or len(playerList)-1:
+
+        $ charactersSelected += 1
+
+        menu:
+
+            while charactersInMenu != len(playerList)-1:
+
+                $ charactersInMenu += 1
+
+                "[playerList[charactersInMenu].name]":
+                    player[charactersSelected] = playerList[charactersInMenu]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
